@@ -38,7 +38,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-            // 'restricted',
+            'restricted',
         ],
 
         'api' => [
@@ -68,6 +68,6 @@ class Kernel extends HttpKernel
         'twofactor'     => \App\Http\Middleware\TwoFactorAuth::class,
         'validemail'    => \App\Http\Middleware\EmailVerificationCheck::class,
         'interstitial'  => \App\Http\Middleware\AccountInterstitial::class,
-        // 'restricted'    => \App\Http\Middleware\RestrictedAccess::class,
+        'restricted'    => \App\Http\Middleware\RestrictedAccess::class,
     ];
 }
